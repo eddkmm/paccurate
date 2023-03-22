@@ -170,7 +170,9 @@ export interface definitions {
      * @description pre-packed boxes, including any items specified that will be packed and excess space used before any new boxes are created.
      * @example []
      */
-    boxes?: definitions['Box'][]
+    boxes?: {
+      box?: definitions['Box']
+    }[]
     /**
      * @description an estimate of typical box utilization for the quick "estimated" boxTypeChoiceStyle, which will be used to ensure "estimated" box type choices are not overly optimistic regarding potential volume utilization.
      * @default 0.85
